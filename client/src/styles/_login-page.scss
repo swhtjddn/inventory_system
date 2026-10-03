@@ -1,0 +1,28 @@
+.login-page {
+  background: $primary-background;
+  color: $font-color;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    margin-bottom: 30px;
+  }
+}
+
+.login-form {
+  background: $secondary-background;
+  width: 400px;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.login-error {
+  color: $error-color;
+  margin-bottom: 15px;
+}
+
+.login-btn {
+  margin-bottom: 15px;
+}

@@ -1,0 +1,14 @@
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  background: $primary-background;
+  color: $font-color;
+}
+
+@media (max-width: 800px) {
+  .app-container {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+}

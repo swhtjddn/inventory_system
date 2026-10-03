@@ -1,0 +1,33 @@
+.main-content {
+  flex: 1;
+  width: 80%;
+  padding: 40px;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  h1 {
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .content-header {
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}

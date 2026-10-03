@@ -1,0 +1,32 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Source+Code+Pro&display=swap");
+
+// Sizing
+$mobile: 575px;
+$tablet: 800px;
+$desktop: 1000px;
+
+// Colors
+$primary-background: #333333;
+$secondary-background: #444444;
+$app-side-bar: #222222;
+$highlight: #efd6c9;
+$font-color: #fffffb;
+$error-color: #ff5858;
+
+$box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.205);
+
+// Font
+$sans-serif: "Montserrat", sans-serif;
+$monospace: "Cutive Mono", "Source Code Pro", "Roboto Mono", monospace;
+
+// Elements
+$forms: (
+  "[type = text], [type=password], [type=email], select, textarea, [type = number]"
+);
+$buttons: (
+  ".sidebar-link, .button, a.button, button, [type=submit], [type=reset], [type=button], a"
+);

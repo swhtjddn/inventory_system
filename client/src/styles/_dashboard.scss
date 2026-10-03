@@ -1,0 +1,54 @@
+.receptionist-call {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+}
+
+.loading-card {
+  opacity: 25%;
+}
+
+.dashboard-card {
+  background: $secondary-background;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  .fulfill-stat {
+    margin-bottom: 20px;
+  }
+  h2 {
+    margin-bottom: 20px;
+    color: $highlight;
+  }
+  .unfulfilled {
+    color: $highlight;
+    font-size: 1.5rem;
+  }
+
+  .dashboard-number {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 800px) {
+  .dashboard-container {
+    grid-template-columns: 100%;
+  }
+
+  .dashboard-card {
+    .dashboard-number {
+      font-size: 2.5rem;
+    }
+  }
+}

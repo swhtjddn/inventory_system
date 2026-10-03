@@ -1,0 +1,101 @@
+.request {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.request-container {
+  color: $font-color;
+  background: $secondary-background;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: $box-shadow;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.request-description {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.lashfix-description {
+  height: 300px;
+}
+
+.request-form {
+  button {
+    margin: 0 auto;
+  }
+}
+
+.request-category {
+  width: 100%;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  border-bottom: 0.3px $font-color solid;
+  color: $highlight;
+}
+
+.request-label {
+  display: block;
+  color: $font-color;
+  flex-basis: 45%;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.disabled-item {
+  color: $error-color;
+}
+
+.request-buttons {
+  position: fixed;
+  right: 10px;
+  bottom: 0px;
+  display: flex;
+  justify-content: row;
+  gap: 2px;
+}
+
+.request-check {
+  min-height: 15px;
+  min-width: 15px;
+  margin-right: 10px;
+}
+
+.request-checkboxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  gap: 20px;
+  text-align: left;
+}
+
+.request-uppercase {
+  text-transform: capitalize;
+  color: $highlight;
+}
+
+.user-request-card {
+  position: relative;
+}
+
+.request-delete {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}

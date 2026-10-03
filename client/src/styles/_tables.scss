@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+    background: $secondary-background;
+    box-shadow: $box-shadow;
+}
+
+table, th, td {
+    // border: 1px solid $font-color;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+th {
+    background: $highlight;
+    color: $primary-background;
+    font-weight: 400;
+    // border: 1px solid $primary-background;
+}
+
+tr:nth-child(odd) {
+    background: $secondary-background;
+}
+
+tr:nth-child(even) {
+    background: darken($secondary-background, 5%);
+}
+
+td {
+    padding: 10px;
+}
+
+th {
+    padding: 10px;
+}
