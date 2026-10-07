@@ -4,6 +4,8 @@ A full-stack web app for running a multi-location lash salon. Employees use it t
 
 Built with **MongoDB, Express, React and Node (MERN)**.
 
+<img width="2932" height="1696" alt="image" src="https://github.com/user-attachments/assets/bcf7ce7c-76ef-4b0d-af7b-33b73d92b897" />
+
 ---
 
 ## Features
@@ -29,6 +31,8 @@ Built with **MongoDB, Express, React and Node (MERN)**.
 
 ### Roles
 Users have a `role` of either `employee` or `admin`. After login, employees are sent to `/home` and admins to `/app`.
+
+<img width="2936" height="1714" alt="image" src="https://github.com/user-attachments/assets/fddc2890-c310-4a91-b5c0-1e0d314b7b30" />
 
 ---
 
