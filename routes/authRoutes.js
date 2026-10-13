@@ -1,6 +1,6 @@
 const passport = require("passport");
 
-module.exports = (app, User) => {
+module.exports = (app, User, requireAdmin) => {
   app.post("/api/login", (req, res, next) => {
     passport.authenticate("local", (err, user, info) => {
       if (err) {
@@ -23,7 +23,7 @@ module.exports = (app, User) => {
     })(req, res, next);
   });
 
-  app.post("/register", async (req, res) => {
+  app.post("/register", requireAdmin, async (req, res) => {
     const { username, password, role, location } = req.body;
     const existingUser = await User.findOne({ username: username });
     if (existingUser) {

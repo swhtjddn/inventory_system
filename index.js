@@ -36,6 +36,22 @@ let ensureAuthenticated = function (req, res, next) {
   else res.redirect("/login");
 };
 
+let requireAdmin = function (req, res, next) {
+  if (!req.isAuthenticated()) {
+    return res.status(401).json({
+      error: 'Unauthorized',
+      message: 'Please log in.'
+    })
+  }
+  if (req.user.role !== 'admin') {
+    return res.status(403).json({
+      error: 'Forbidden',
+      message: 'Admin access required.'
+    })
+  }    
+  return next();
+}
+
 app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,
@@ -48,7 +64,7 @@ app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
-require("./routes/authRoutes")(app, User);
+require("./routes/authRoutes")(app, User, requireAdmin);
 require("./routes/employeeRoutes")(app, User, ensureAuthenticated);
 require("./routes/inventoryRoutes")(app, Item, ensureAuthenticated);
 require("./routes/requestRoutes")(

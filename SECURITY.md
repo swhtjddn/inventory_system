@@ -1,6 +1,6 @@
-# Security Review: Lash Dreams Portal
+# Security Review: Inventory System Portal
 
-This document records a security review of the Lash Dreams inventory and operations app, which I built and ran for a 20+ person, two-location salon from 2021 to early 2025. The review covers what I found, how I confirmed each issue, and how each one is being fixed.
+This document records a security review of the inventory and operations app, which I built and ran for a 20+ person, two-location salon from 2021 to early 2025. The review covers what I found, how I confirmed each issue, and how each one is being fixed.
 
 **Status:** In progress. Findings are being reproduced and fixed on the `security-fixes` branch.
 
@@ -76,14 +76,16 @@ curl -X POST http://localhost:4000/register \
 ```
 Then log in as `attacker`. The login response redirects to the admin dashboard.
 
-**Evidence:** _Add the curl output and a screenshot of the admin dashboard._
+**Evidence:**
+
+![curl output to register user without admin permissions](security_images/SEC1/curl_command.png)
+![user created in dashboard](security_images/SEC1/registered_user.png)
 
 **Root cause:** Access to the registration form was restricted only in the frontend (it lives under the admin dashboard at `/app/register`). The API endpoint behind it was never protected.
 
-**Fix (planned):**
-- Require an authenticated admin session on `/register`.
-- Accept only `employee` or `admin` as a role.
-- Create the first admin with a command-line seed script instead of an open endpoint.
+**Fix:**
+- Created requireAdmin middleware
+- Added requireAdmin middleware to authRoutes.js
 
 **Verification (planned):** Automated tests confirm that `/register` returns 401 with no session and 403 for an employee session.
 

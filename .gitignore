@@ -18,3 +18,8 @@ Thumbs.db
 
 # Test coverage (server side)
 coverage/
+
+employee.txt
+admin.txt
+
+config/config.txt
